@@ -10,9 +10,22 @@ function MainHeader() {
         <MdMessage />
         React Poster
       </h1>
+
+      <p>
+        <Link to="/movies" className={classes.button}>
+          <MdPostAdd size={12} />
+          Movies
+        </Link>
+      </p>
+      <p>
+        <Link to="/" className={classes.button}>
+          <MdPostAdd size={12} />
+          Posts
+        </Link>
+      </p>
       <p>
         <Link to="/create-post" className={classes.button}>
-          <MdPostAdd size={18} />
+          <MdPostAdd size={12} />
           New Post
         </Link>
       </p>

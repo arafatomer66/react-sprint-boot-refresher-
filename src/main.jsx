@@ -6,6 +6,7 @@ import Posts, { postLoader as postLoader} from './routes/Posts/Posts';
 import NewPost, { action as postAction} from './routes/NewPost/NewPost';
 import RootLayout from './routes/RootLayout';
 import PostDetails, {loader as postDetailLoader} from './routes/PostDetail/PostDetail';
+import Movies, { moviesLoader } from './routes/Movies/Movies';
 
 
 const router = createBrowserRouter(
@@ -27,11 +28,16 @@ const router = createBrowserRouter(
           ]
         },
         {
+          path: "/movies",
+          element: <Movies/>,
+          loader: moviesLoader
+        },
+        {
           path: "/:id",
           element: <PostDetails/>,
           loader: postDetailLoader
         }
-      ]
+      ],
     }
   ]
 );

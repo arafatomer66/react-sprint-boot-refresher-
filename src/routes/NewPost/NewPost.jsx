@@ -73,7 +73,7 @@ export default NewPost;
 export async function action(data) {
   const formData = await data.request.formData();
   const postData = Object.fromEntries(formData);
-  await fetch("http://localhost:8080/posts", {
+  await fetch("http://localhost:8081/posts", {
       method: "POST",
       body: JSON.stringify(postData),
       headers: {

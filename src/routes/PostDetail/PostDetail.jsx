@@ -36,7 +36,7 @@ export default PostDetails;
 
 export async function loader(data) {
   console.log("Post Detail Loader");
-  const response = await fetch("http://localhost:8080/posts/" + data.params.id);
+  const response = await fetch("http://localhost:8081/posts/" + data.params.id);
   const responseJson = await response.json();
 
   console.log(responseJson);

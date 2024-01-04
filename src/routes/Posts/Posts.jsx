@@ -27,7 +27,7 @@ export default function Posts() {
 }
 
 export async function postLoader() {
-  const response = await fetch("http://localhost:8080/posts");
+  const response = await fetch("http://localhost:8081/posts");
   const responseJson = await response.json();
 
   console.log(responseJson);

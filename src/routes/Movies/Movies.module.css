@@ -1,0 +1,20 @@
+.moviesHeading {
+  color: #333;
+}
+
+.movies {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieCard {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+}

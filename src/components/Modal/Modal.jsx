@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./Modal.module.css";
 import PropTypes from "prop-types";
 
 export default function Modal(props) {
+  const navigate = useNavigate();
+
+  function closeHandler() {
+    navigate('/');
+    // navigate('..');
+  }
+
   return (
     <>
-      <div className={classes.backdrop} onClick={props.onClose}></div>
+      <div className={classes.backdrop} onClick={closeHandler}></div>
         <dialog open className={classes.modal}>{props.children}</dialog>
     </>
   );
@@ -12,5 +20,5 @@ export default function Modal(props) {
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  onClose: PropTypes.func.isRequired,
+  // onClose: PropTypes.func.isRequired,
 };
